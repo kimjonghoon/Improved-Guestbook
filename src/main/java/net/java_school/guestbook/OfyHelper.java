@@ -19,14 +19,12 @@ package net.java_school.guestbook;
 import com.googlecode.objectify.ObjectifyService;
 
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
 import javax.servlet.ServletContextEvent;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP is run.  This is
  * required to let JSP's access Ofy.
  **/
-@WebListener
 public class OfyHelper implements ServletContextListener {
 	public static void register() {
 		ObjectifyService.register(Guestbook.class);
